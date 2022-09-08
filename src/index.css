@@ -1,13 +1,126 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* google font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap");
+
+/* GENERAL LAYOUT */
+:root {
+  --primary: #9dbf9b;
+  --primaryhover: #78a776;
+  --secondary: #546a76;
+  --deletebutton: #ebaa98;
+  --deletebuttonhover: #dd7255;
+  --bigfont: #45434c;
+  --error: #e7195a;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: #efebe7;
+  margin: 0;
+  font-family: "Poppins";
+}
+
+h1 {
+  color: var(--bigfont);
+}
+
+.page {
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* HOMEPAGE */
+.home {
+  display: grid;
+  grid-template-columns: 1.25fr 2.25fr;
+  gap: 50px;
+}
+.todo-details {
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.todo-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+  color: var(--bigfont);
+}
+.todo-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #514f59;
+}
+
+.todo-details span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: var(--deletebutton);
+  padding: 6px;
+  border-radius: 100%;
+  color: #333;
+  transition: 0.2s;
+}
+
+.todo-details span:hover {
+  cursor: pointer;
+  background: var(--deletebuttonhover);
+  color: #333;
+}
+
+/* FORM*/
+label,
+input {
+  display: block;
+}
+
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form {
+  position: sticky;
+  top: 20px;
+  height: 0;
+}
+
+form button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  transition: 0.2s;
+}
+
+form button:hover {
+  background: var(--primaryhover);
+  color: #fff;
+}
+
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+input.error {
+  border: 1.5px solid var(--error);
 }
