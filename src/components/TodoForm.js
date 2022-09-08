@@ -42,14 +42,14 @@ const TodoForm = () => {
             <h1>List of Things To Do</h1>
 
             <label>What do I need to do?</label>
-            <input type="text" 
+            <input type="text" placeholder="Make breakfast at 7:00 am"
             onChange={(e) => setTitle(e.target.value)}
             value={title}
             className={emptyFields.includes('title') ? 'error' : ''}
             />
 
-            <label>Extra Descriptions</label>
-            <input type="text" 
+            <label>Descriptions</label>
+            <input type="text" placeholder="French toast and coffee, maybe?"
             onChange={(e) => setDescription(e.target.value)}
             value={description}
             className={emptyFields.includes('description') ? 'error' : ''}

@@ -3,12 +3,12 @@
 
 /* GENERAL LAYOUT */
 :root {
-  --primary: #9dbf9b;
-  --primaryhover: #78a776;
+  --primary: #0d5d56;
+  --primaryhover: #083632;
   --secondary: #546a76;
   --deletebutton: #ebaa98;
   --deletebuttonhover: #dd7255;
-  --bigfont: #45434c;
+  --bigfont: #052321;
   --error: #e7195a;
 }
 
@@ -34,6 +34,7 @@ h1 {
   grid-template-columns: 1.25fr 2.25fr;
   gap: 50px;
 }
+
 .todo-details {
   background: #fff;
   border-radius: 4px;
@@ -43,11 +44,27 @@ h1 {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
+
 .todo-details h4 {
   margin: 0 0 10px 0;
   font-size: 1.5rem;
+  font-weight: 600;
   color: var(--bigfont);
 }
+
+.todo-details h5 {
+  color: var(--bigfont);
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0px 0 15px 0px;
+}
+
+.todo-details h6 {
+  color: #cbc8d0;
+  font-weight: normal;
+  margin: 0;
+}
+
 .todo-details p {
   margin: 0;
   font-size: 0.9em;
@@ -62,14 +79,14 @@ h1 {
   background: var(--deletebutton);
   padding: 6px;
   border-radius: 100%;
-  color: #333;
-  transition: 0.2s;
+  color: #003952;
+  transition: 0.5s;
 }
 
 .todo-details span:hover {
   cursor: pointer;
   background: var(--deletebuttonhover);
-  color: #333;
+  color: #fafafa;
 }
 
 /* FORM*/
@@ -83,9 +100,14 @@ input {
   margin-top: 10px;
   margin-bottom: 20px;
   width: 100%;
-  border: 1px solid #ddd;
+  border: 1.5px solid #d9d6d2;
   border-radius: 4px;
   box-sizing: border-box;
+  color: #052321;
+}
+
+input::placeholder {
+  color: #e0dee3;
 }
 
 form {
@@ -98,8 +120,9 @@ form button {
   background: var(--primary);
   border: 0;
   color: #fff;
-  padding: 10px;
+  padding: 20px;
   font-family: "Poppins";
+  font-size: 18px;
   border-radius: 4px;
   cursor: pointer;
   margin-top: 20px;
